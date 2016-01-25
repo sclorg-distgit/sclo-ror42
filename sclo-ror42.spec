@@ -22,7 +22,7 @@
 Summary: Package that installs %scl
 Name: %scl_name
 Version: 3.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPLv2+
 Source0: README
 Source1: LICENSE
@@ -62,6 +62,7 @@ Summary: Package shipping basic build configuration
 Requires: scl-utils-build
 Requires: %{scl_runtime}
 Requires: %{scl_prefix_ruby}scldevel
+Requires: v8314-scldevel
 
 %description build
 Package shipping essential configuration macros to build %scl Software Collection.
@@ -153,6 +154,9 @@ EOF
 
 
 %changelog
+* Mon Jan 25 2016 Dominic Cleal <dcleal@redhat.com> 3.0-2
+- Depend on v8314-scldevel from -build for therubyracer
+
 * Fri Dec 11 2015 Dominic Cleal <dcleal@redhat.com> 3.0-1
 - Update metapackage from rh-ror41 to sclo-ror42
 
